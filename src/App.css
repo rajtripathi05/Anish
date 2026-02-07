@@ -39,9 +39,9 @@
 
 .nav-item.active {
     color: white;
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(16, 185, 129, 0.15);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 .app-main {
@@ -77,14 +77,14 @@
 }
 
 .logo-icon {
-    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     width: 42px;
     height: 42px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
 }
 
 .sparkle-icon {
@@ -109,13 +109,13 @@
 }
 
 .stats-badge {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(16, 185, 129, 0.05);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #a855f7;
-    border: 1px solid rgba(168, 85, 247, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .input-group {
@@ -153,13 +153,13 @@
 .todo-input:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(99, 102, 241, 0.5);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
 }
 
 .add-button {
     padding: 0 1.25rem;
-    background: #6366f1;
+    background: #10b981;
     color: white;
     border: none;
     border-radius: 16px;
@@ -171,9 +171,9 @@
 }
 
 .add-button:hover {
-    background: #4f46e5;
+    background: #059669;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
 .todo-list-container {

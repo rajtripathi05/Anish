@@ -14,9 +14,7 @@ permissions:
   issues: read
   pull-requests: read
 
-network:
-  - defaults
-  - telemetry.individual.githubcopilot.com
+network: all
 
 tools:
   github:

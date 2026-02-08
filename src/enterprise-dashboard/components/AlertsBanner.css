@@ -1,0 +1,46 @@
+/* Alerts Banner Styles */
+.alerts-banner {
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--color-warning);
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.1) 0%, rgba(20, 20, 30, 0.4) 100%);
+    padding: var(--spacing-md);
+}
+
+.alerts-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.alerts-icon {
+    font-size: 1.5rem;
+}
+
+.alerts-text {
+    flex: 1;
+}
+
+.alerts-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-warning);
+    margin-bottom: 0.25rem;
+}
+
+.alerts-message {
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+}
+
+.alerts-action .btn {
+    border: 1px solid var(--color-warning);
+    color: var(--color-warning);
+    background: transparent;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+.alerts-action .btn:hover {
+    background: var(--color-warning);
+    color: black;
+}

@@ -1,0 +1,334 @@
+/* Chart Components Styles */
+
+.chart-container {
+    width: 100%;
+}
+
+.chart-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-primary);
+}
+
+.chart-empty {
+    padding: var(--spacing-lg);
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* Line Chart */
+.line-chart {
+    width: 100%;
+    overflow: visible;
+}
+
+.grid-line {
+    stroke: var(--glass-border);
+    stroke-width: 0.5;
+}
+
+.chart-line {
+    filter: drop-shadow(0 0 8px var(--color-primary-glow));
+    transition: all var(--transition-normal);
+}
+
+.chart-area {
+    opacity: 0.3;
+}
+
+.chart-point {
+    fill: var(--color-accent);
+    stroke: var(--color-bg-primary);
+    stroke-width: 1;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.chart-point:hover {
+    r: 4;
+    filter: drop-shadow(0 0 8px var(--color-accent-glow));
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.chart-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Bar Chart */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) 0;
+}
+
+.bar-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.bar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100%;
+    background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-primary) 100%);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    position: relative;
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    min-height: 4px;
+}
+
+.bar:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.bar-value {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.bar:hover .bar-value {
+    opacity: 1;
+}
+
+.bar-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Donut Chart */
+.donut-chart-wrapper {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.donut-chart {
+    flex-shrink: 0;
+}
+
+.donut-slice {
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.donut-slice:hover {
+    opacity: 0.8;
+    filter: brightness(1.2);
+}
+
+.donut-center-text {
+    font-size: 16px;
+    font-weight: 700;
+    fill: var(--color-text-primary);
+}
+
+.donut-legend {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    min-width: 150px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-label {
+    flex: 1;
+    color: var(--color-text-secondary);
+}
+
+.legend-value {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+/* Sparkline */
+.sparkline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+}
+
+.progress-label {
+    color: var(--color-text-secondary);
+}
+
+.progress-value {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    border-radius: var(--radius-md);
+    transition: width var(--transition-slow);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent);
+    animation: shimmer 2s infinite;
+}
+
+.progress-percentage {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    position: relative;
+    z-index: 1;
+}
+
+/* Heatmap */
+.heatmap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.heatmap-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.heatmap-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    min-width: 80px;
+}
+
+.heatmap-cells {
+    display: flex;
+    gap: 2px;
+    flex: 1;
+}
+
+.heatmap-cell {
+    flex: 1;
+    aspect-ratio: 1;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.heatmap-cell:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+.heatmap-cell::after {
+    content: attr(data-value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    pointer-events: none;
+}
+
+.heatmap-cell:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .donut-chart-wrapper {
+        flex-direction: column;
+    }
+
+    .bar-chart {
+        gap: var(--spacing-xs);
+    }
+
+    .chart-labels {
+        font-size: 10px;
+    }
+}

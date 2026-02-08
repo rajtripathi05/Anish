@@ -1,0 +1,99 @@
+.explanation-tooltip-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+    z-index: 100;
+}
+
+.tooltip-trigger {
+    cursor: help;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    transition: opacity var(--transition-fast);
+}
+
+.tooltip-trigger:hover {
+    opacity: 1;
+}
+
+.explanation-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    padding: var(--spacing-md);
+    margin-top: var(--spacing-xs);
+    background: var(--color-bg-tertiary);
+    /* Solid background for readability */
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    font-size: var(--font-size-xs);
+    text-align: left;
+    pointer-events: none;
+    /* Prevent flickering */
+}
+
+/* Tooltip Arrow */
+.explanation-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--color-bg-tertiary) transparent;
+}
+
+.tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: var(--spacing-xs);
+}
+
+.tooltip-title {
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.confidence-badge {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 99px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.confidence-high {
+    background: rgba(16, 185, 129, 0.2);
+    color: var(--color-success);
+}
+
+.confidence-medium {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--color-warning);
+}
+
+.confidence-low {
+    background: rgba(239, 68, 68, 0.2);
+    color: var(--color-error);
+}
+
+.tooltip-text {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.4;
+}
+
+.tooltip-calc {
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.25rem;
+    border-radius: 4px;
+    color: var(--color-text-muted);
+}

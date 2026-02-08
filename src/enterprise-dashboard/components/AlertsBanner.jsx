@@ -1,9 +1,5 @@
 import React from 'react';
 
-/**
- * Alerts Banner
- * Displays improved alerts for critical organizational risks
- */
 const AlertsBanner = ({ alerts = [], totalRisk = 0 }) => {
     if (alerts.length === 0 && totalRisk === 0) return null;
 
